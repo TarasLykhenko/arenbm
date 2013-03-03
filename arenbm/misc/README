@@ -1,0 +1,4 @@
+three strategies to be compared to ours:
+	- lock based
+	- packet mode
+	- bare bones: the simplest approach
