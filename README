@@ -55,6 +55,10 @@ We describe the most important options here below.
 	*Functioning* section);
 	MIN, MAX: maximum and minimum number content
 	length in bit;
+	+ hard_limit_flag: boolean flag, true means
+	bandwidth limit enforcement for deadline-aware
+	services, otherwise bandwidth scheduler does
+	fair sharing accurately.
 	+ TS: time accuracy, e.g. 1000 for millisecond
 	precision
 	+ DURATION: simulation duration in seconds;
