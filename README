@@ -1,0 +1,76 @@
+* Overview
+
+AREN bandwidth manager is a component for
+PeerSim that allows us to simulate bandwidth
+reservation enforcement. Our main goal is
+provide a accurate and lightweight mechanism
+for evaluation the performance deadline-aware
+cloud services. 
+
+We have organised the sources as follows.  
+	+ general: main configuration file (for
+	PeerSim API), and dependencies (.jar 
+	files)
+	+ src: java sources, including 
+	implemented layers of our component
+	+ misc: three simple bandwidth scheduler
+	approaches for comparisons. They have 
+	similar configuration parameters. 
+	+ Makefile: main makefile.
+
+* Test Simulation Functioning 
+
+We assume that the reader is familiar with 
+PeerSim API.
+
+The default simulation behaviour is 
+straightforward. Peers play two roles: content 
+providers or consumers. The configuration 
+variable SERVER_SET_SIZE defines the number 
+of servers. During the initialisation, defined
+on "init.initializer stack.Initializer" 
+configuration entry, peers download contents 
+from randomly selected  servers. Content lengths 
+are generated before  starting content download, 
+and range from MIN to MAX configuration variable. 
+Consumers download contents continuously. Thus,
+whenever a consumer finishes a download it starts 
+a new one immediately, in a such chain fashion.
+
+* Main configuration options
+
+The main configuration file is:
+	+ general/config_file.cfg
+
+We describe the most important options here below.
+
+	+ SERVER_SET_SIZE : number of peers that will
+	behave as content providers;
+	+ BWD: bandwidth in bits per second for any 
+	peer;
+	+ PARALLEL_DEGREE: maximum number of concurrent 
+	downloads. this means the number of downloads
+	launched during the initialisation by each 
+	consumer (consumer role is explained in 
+	*Functioning* section);
+	MIN, MAX: maximum and minimum number content
+	length in bit;
+	+ TS: time accuracy, e.g. 1000 for millisecond
+	precision
+	+ DURATION: simulation duration in seconds;
+	+ NETSIZE: number of Peers.
+
+* Let's play
+
+There is a ready-to-run configuration that 
+simulates the application behaviour described
+on *Functioning* section of this file.
+
+To run a simulation:
+	make run 
+	
+* Futher information
+
+More details about bandwidth scheduling and network
+layer functioning are available found on src/net 
+sources comments and java documentation.
