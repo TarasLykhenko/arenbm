@@ -5,7 +5,9 @@ PeerSim that allows us to simulate bandwidth
 reservation enforcement. Our main goal is
 provide a accurate and lightweight mechanism
 for evaluation the performance deadline-aware
-cloud services. 
+cloud services. We published a paper on this,
+available on 
+http://pagesperso-systeme.lip6.fr/Guthemberg.Silvestre/publications/silvestre_mospas13.pdf
 
 We have organised the sources as follows.  
 	+ general: main configuration file (for
