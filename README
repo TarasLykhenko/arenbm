@@ -75,8 +75,8 @@ on *Functioning* section of this file.
 To run a simulation:
 	make run 
 	
-Results of this simulation are written to measurements.txt file, as defined
-in the general/config_file.cfg configuration file. 
+Results of this simulation are written to output.txt, as defined
+in general/config_file.cfg. 
 
 Enjoy!
 
