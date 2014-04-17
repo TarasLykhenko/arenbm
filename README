@@ -9,7 +9,7 @@ cloud services. We published a paper on this,
 available on 
 http://pagesperso-systeme.lip6.fr/Guthemberg.Silvestre/publications/silvestre_mospas13.pdf
 
-We have organised the sources as follows.  
+We have organized the sources as follows.  
 	+ general: main configuration file (for
 	PeerSim API), and dependencies (.jar 
 	files)
@@ -25,11 +25,11 @@ We have organised the sources as follows.
 We assume that the reader is familiar with 
 PeerSim API.
 
-The default simulation behaviour is 
+The default simulation behavior is 
 straightforward. Peers play two roles: content 
 providers or consumers. The configuration 
 variable SERVER_SET_SIZE defines the number 
-of servers. During the initialisation, defined
+of servers. During the initialization, defined
 on "init.initializer stack.Initializer" 
 configuration entry, peers download contents 
 from randomly selected  servers. Content lengths 
@@ -52,7 +52,7 @@ We describe the most important options here below.
 	peer;
 	+ PARALLEL_DEGREE: maximum number of concurrent 
 	downloads. this means the number of downloads
-	launched during the initialisation by each 
+	launched during the initialization by each 
 	consumer (consumer role is explained in 
 	*Functioning* section);
 	MIN, MAX: maximum and minimum number content
@@ -69,13 +69,18 @@ We describe the most important options here below.
 * Let's play
 
 There is a ready-to-run configuration that 
-simulates the application behaviour described
+simulates the application behavior described
 on *Functioning* section of this file.
 
 To run a simulation:
 	make run 
 	
-* Futher information
+Results of this simulation are written to measurements.txt file, as defined
+in the general/config_file.cfg configuration file. 
+
+Enjoy!
+
+* Further information
 
 More details about bandwidth scheduling and network
 layer functioning are available found on src/net 

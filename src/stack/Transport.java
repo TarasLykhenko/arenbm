@@ -204,7 +204,7 @@ public class Transport implements EDProtocol, Protocol, TransportSkeleton {
 			while (c_ids.hasMoreElements()) {
 				key=c_ids.nextElement();
 				ttx=network.getTb(key.longValue());
-				msg=((Message)this.uploads.get(key));
+				msg=(this.uploads.get(key));
 				tx+=ttx-msg.getTransientTx();
 				msg.setTransientTx(ttx);
 			}

@@ -8,7 +8,7 @@ compile: clean
 	cd src && jar -cf bbones.jar `find . -name "*.class"` && mv bbones.jar ..  && cd ..
 
 clean:
-	rm -rf doc
+	rm -rf doc *.txt
 	rm -f `find . -iname "*.class"`
 	rm -f output.log
 
